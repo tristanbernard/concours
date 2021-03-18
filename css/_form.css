@@ -1,0 +1,26 @@
+/* Validation de formulaire
+   =================================*/
+.erreur {
+    color: red;
+}
+.erreur:empty{
+    display: none;
+}
+/*** Affichage des icônes (sprites) ***/
+.icone {
+    display: inline-block;
+    width:32px;
+    height:32px;
+    background-image: url(images/good-warning-error.png);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    transform: scale(0.75, 0.75);
+}
+
+.icone--ok {
+
+}
+
+.icone--avertissement {
+
+}
