@@ -8,7 +8,7 @@
     <title>TP4</title>
 </head>
 <body>
-    <header id="header" role="banner">
+    <header id="header" class="conteneur" role="banner">
         <picture class="picture">
             <source media="(max-width:600px)" srcset="images/bandeau_600.jpg">
             <source media="(min-width:601px)" srcset="images/bandeau_1200.jpg">
@@ -20,25 +20,27 @@
     </header>
 
     <main class="conteneur" id="main" role="main">
-        <h1>Concours</h1>
-        <aside class="aside cols_4_de_12" role="complementary">
-            <p>Complétez le coupon de participation et répondez à la question du jour cidessous.</p>
+        <div class="cols_4_de_12">
+            <h1>Concours</h1>
+            <aside class="aside" role="complementary">
+                <p>Complétez le coupon de participation et répondez à la question du jour cidessous.</p>
 
-            <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
-                Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
-                les finalistes présents, un grand gagnant s’envolera vers la destination de
-                son choix!</p>
+                <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
+                    Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
+                    les finalistes présents, un grand gagnant s’envolera vers la destination de
+                    son choix!</p>
 
-            <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance
-                à tous!</p>
-        </aside>
+                <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance
+                    à tous!</p>
+            </aside>
+        </div>
 
         <form class="cols_8_de_12" action="index.html" method="get" role="form">
             <fieldset>
                 <legend><h2>Coupon de participation</h2></legend>
                 <fieldset>
                     <legend>Nom complet</legend>
-                    <div class="prenom-nom ctnValidation">
+                    <div class="prenom-nom rangee cols_6_de_12 ctnValidation">
                         <div class="prenom ctnValidation">
                             <p>
                                 <label for="prenom">Prénom</label>
@@ -258,45 +260,49 @@
                 </div>
 
                 <fieldset>
-                    <legend>Téléphone (Indicatif - numéro)</legend>
+                    <legend class="h4">Téléphone (Indicatif - numéro)</legend>
 
-                    <div class="indicatif ctnValidation">
-                        <p>
-                            <label for="indicatif">Indicatif</label>
-                            <input type="text" name="indicatif" id="indicatif" minlength="3" maxlength="10" required>
-                        </p>
+                    <div class="telephone rangee">
+                        <div class="indicatif ctnValidation">
+                            <p>
+                                <label for="indicatif">Indicatif</label>
+                                <input type="text" name="indicatif" id="indicatif" minlength="3" maxlength="10" required>
+                            </p>
 
-                        <p class="erreur">
-                            <span>
-                                <span class="screen-reader-only">Avertissement</span>
-                                <span class="icone icone--avertissement" aria-hidden="true"></span>
-                            </span>
-                            Veuillez préciser votre indicatif régional dans le premier champ de saisie.
-                        </p>
-                    </div>
+                            <p class="erreur">
+                                <span>
+                                    <span class="screen-reader-only">Avertissement</span>
+                                    <span class="icone icone--avertissement" aria-hidden="true"></span>
+                                </span>
+                                Veuillez préciser votre indicatif régional dans le premier champ de saisie.
+                            </p>
+                        </div>
 
-                    <div class="numero ctnValidation">
-                        <p>
-                            <label for="numero">Numéro</label>
-                            <input type="text" name="numero" id="numero" minlength="3" maxlength="7" required>
-                        </p>
+                        <p class="separateur cols_2_de_12">-</p>
 
-                        <p class="erreur">
-                            <span>
-                                <span class="screen-reader-only">Avertissement</span>
-                                <span class="icone icone--avertissement" aria-hidden="true"></span>
-                            </span>
-                            Veuillez préciser les 7 chiffres de votre numéro de téléphone dans le
-                            second champ de saisie.
-                        </p>
+                        <div class="numero ctnValidation">
+                            <p>
+                                <label for="numero">Numéro</label>
+                                <input type="text" name="numero" id="numero" minlength="3" maxlength="7" required>
+                            </p>
 
-                        <p class="erreur">
-                            <span>
-                                <span class="screen-reader-only">Avertissement</span>
-                                <span class="icone icone--avertissement" aria-hidden="true"></span>
-                            </span>
-                            Attention, le numéro de téléphone ne doit pas comporter d'espace ou de trait d'union.
-                        </p>
+                            <p class="erreur">
+                                <span>
+                                    <span class="screen-reader-only">Avertissement</span>
+                                    <span class="icone icone--avertissement" aria-hidden="true"></span>
+                                </span>
+                                Veuillez préciser les 7 chiffres de votre numéro de téléphone dans le
+                                second champ de saisie.
+                            </p>
+
+                            <p class="erreur">
+                                <span>
+                                    <span class="screen-reader-only">Avertissement</span>
+                                    <span class="icone icone--avertissement" aria-hidden="true"></span>
+                                </span>
+                                Attention, le numéro de téléphone ne doit pas comporter d'espace ou de trait d'union.
+                            </p>
+                        </div>
                     </div>
                 </fieldset>
             </fieldset>
@@ -309,7 +315,7 @@
                         Date à laquelle la question a été posée?
                     </legend>
 
-                    <div class="rangee">
+                    <div class="date rangee">
                         <p class="cols_4_de_12">
                             <label for="jour">Jour</label>
                             <input type="text" name="jour" id="jour" maxlength="2" required>
@@ -350,47 +356,53 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend><h3>Lequel de ces monuments est un mausolée?</h3></legend>
+                    <legend class="h4">Lequel de ces monuments est un mausolée?</legend>
 
                     <div class="images ctnValidation">
                         <ul>
                             <li>
                                 <p>
-                                    <input type="radio" name="mausolee" id="image-1" value="image-1" required>
-                                    <picture class="picture">
-                                        <source media="(max-width:600px)" srcset="images/chateaudIf-small.jpg">
-                                        <source media="(min-width:601px)" srcset="images/chateaudIf.jpg">
-                                        <img class="picture__img" src="images/chateaudIf.jpg" alt="Château d'If">
-                                    </picture>
-                                    <p>
-                                        <label for="image-1">Le château d'If</label>
-                                    </p>
+                                    <input type="radio" name="mausolee" id="image-1" value="image-1" class="screen-reader-only" required>
+                                    <label for="image-1">
+                                        <picture class="picture">
+                                            <source media="(max-width:600px)" srcset="images/chateaudIf-small.jpg">
+                                            <source media="(min-width:601px)" srcset="images/chateaudIf.jpg">
+                                            <img class="picture__img" src="images/chateaudIf.jpg" alt="Château d'If">
+                                        </picture>
+                                        <span>
+                                            Le château d'If
+                                        </span>
+                                    </label>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <input type="radio" name="mausolee" id="image-2" value="image-2">
-                                    <picture class="picture">
-                                        <source media="(max-width:600px)" srcset="images/palaisluxembourg-small.jpg">
-                                        <source media="(min-width:601px)" srcset="images/palaisluxembourg.jpg">
-                                        <img class="picture__img" src="images/palaisluxembourg.jpg" alt="Palais du Luxembourg">
-                                    </picture>
-                                    <p>
-                                        <label for="image-2">Le palais du Luxembourg</label>
-                                    </p>
+                                    <input type="radio" name="mausolee" id="image-2" value="image-2" class="screen-reader-only">
+                                    <label for="image-2">
+                                        <picture class="picture">
+                                            <source media="(max-width:600px)" srcset="images/palaisluxembourg-small.jpg">
+                                            <source media="(min-width:601px)" srcset="images/palaisluxembourg.jpg">
+                                            <img class="picture__img" src="images/palaisluxembourg.jpg" alt="Palais du Luxembourg">
+                                        </picture>
+                                        <span>
+                                            Le palais du Luxembourg
+                                        </span>
+                                    </label>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <input type="radio" name="mausolee" id="image-3" value="image-3">
-                                    <picture class="picture">
-                                        <source media="(max-width:600px)" srcset="images/tajmahal-small.jpg">
-                                        <source media="(min-width:601px)" srcset="images/tajmahal.jpg">
-                                        <img class="picture__img" src="images/tajmahal.jpg" alt="Taj Mahal">
-                                    </picture>
-                                    <p>
-                                        <label for="image-3">Le Taj Mahal</label>
-                                    </p>
+                                    <input type="radio" name="mausolee" id="image-3" value="image-3" class="screen-reader-only">
+                                    <label for="image-3">
+                                        <picture class="picture">
+                                            <source media="(max-width:600px)" srcset="images/tajmahal-small.jpg">
+                                            <source media="(min-width:601px)" srcset="images/tajmahal.jpg">
+                                            <img class="picture__img" src="images/tajmahal.jpg" alt="Taj Mahal">
+                                        </picture>
+                                        <span>
+                                            Le Taj Mahal
+                                        </span>
+                                    </label>
                                 </p>
                             </li>
                         </ul>
@@ -432,9 +444,9 @@
         </form>
     </main>
 
-    <footer id="footer" role="contentinfo">
-        <small>© 2021, Tristan Bernard.
-            Réalisé dans le cadre du cours Intégration II,
+    <footer id="footer" class="conteneur" role="contentinfo">
+        <small><b>© 2021, Tristan Bernard.</b></small>
+            <small>Réalisé dans le cadre du cours Intégration II,
             Programme TIM, Cégep de Sainte-Foy.</small>
     </footer>
 </body>
