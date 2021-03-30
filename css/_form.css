@@ -11,7 +11,7 @@
     display: inline-block;
     width:32px;
     height:32px;
-    background-image: url(images/good-warning-error.png);
+    background-image: url(../images/good-warning-error.png);
     background-repeat: no-repeat;
     vertical-align: middle;
     transform: scale(0.75, 0.75);
